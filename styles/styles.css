@@ -45,6 +45,16 @@ body {
   font-size: 1.75rem;
 }
 
+.title sub {
+  font-size: 0.45em;
+  color: var(--text-muted);
+  opacity: 0.75;
+  vertical-align: baseline;
+  position: relative;
+  bottom: -0.15em;
+  margin-left: 0.35em;
+}
+
 .subtitle {
   margin-top: 0.5rem;
   color: var(--text-muted);
