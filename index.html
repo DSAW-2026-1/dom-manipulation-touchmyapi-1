@@ -1,13 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>Mi TODO list</title>
   </head>
   <body>
-    <h1>Mi TODO list</h1>
-    <script src="scripts/script.js"></script>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="title">Mi TODO list<sub>TouchMyAPI™</sub></h1>
+        <p class="subtitle">Crea, completa y elimina tus tareas.</p>
+      </div>
+    </header>
+
+    <main class="container" id="app">
+      <section class="card" aria-label="Lista de tareas">
+        <form class="todo-form" id="todoForm" autocomplete="off">
+          <label class="sr-only" for="todoInput">Nueva tarea</label>
+          <input
+            class="todo-input"
+            id="todoInput"
+            name="todo"
+            type="text"
+            placeholder="Escribe una tarea…"
+            maxlength="120"
+            required
+          />
+          <button class="btn btn-primary" type="submit">Agregar</button>
+        </form>
+
+        <div class="toolbar">
+          <p class="meta" id="metaText">0 tareas</p>
+          <button class="btn btn-ghost" type="button" id="clearCompletedBtn">
+            Limpiar completadas
+          </button>
+        </div>
+
+        <ul class="todo-list" id="todoList" aria-live="polite"></ul>
+        <p class="empty" id="emptyState">No hay tareas todavía. Agrega la primera.</p>
+      </section>
+    </main>
+
+    <script src="/scripts/script.js" defer></script>
   </body>
 </html>
